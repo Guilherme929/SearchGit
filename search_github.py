@@ -4,6 +4,7 @@ import requests, sys
 def busca_informacoes_github(nomes, token):
     url = f'https://api.github.com/search/users?q={nomes}'
 
+
     headers = {
         'Authorization': f'token {token}'
     }
@@ -24,10 +25,29 @@ def busca_informacoes_github(nomes, token):
         print('Ocorreu um error', error)
 
 if __name__ == '__main__':
+    print('''
+
+ _______                            __       _______  __  __    __            __
+|   _   |.-----..---.-..----..----.|  |--.  |   _   ||__||  |_ |  |--..--.--.|  |--.
+|   1___||  -__||  _  ||   _||  __||     |  |.  |___||  ||   _||     ||  |  ||  _  |
+|____   ||_____||___._||__|  |____||__|__|  |.  |   ||__||____||__|__||_____||_____|
+|:  1   |                                   |:  1   |
+|::.. . |                                   |::.. . |
+`-------'                                   `-------'
+
+
+
+
+''')
+    
+
+
     if len(sys.argv) != 2:
         print('main <Nome>')
         sys.exit()
     
+
+
     url = sys.argv[1]
-    token = 'tem_q_botar_seu_token'
+    token = 'Coloque_seu_token!'
     busca_informacoes_github(url, token)
